@@ -1,12 +1,9 @@
-FROM node:alpine
- 
-# Add the following lines
-ENV CI=true
-ENV WDS_SOCKET_PORT=0
- 
+FROM node:18-alpine
+  
 WORKDIR /app
-COPY package.json ./
+EXPOSE 5173
+COPY package.json package-lock.json ./
 RUN npm install
 COPY ./ ./
  
-CMD ["npm", "start"]
+CMD [ "npm", "run", "dev" ]
