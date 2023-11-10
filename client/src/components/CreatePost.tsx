@@ -7,7 +7,7 @@ export default function CreatePost() {
 
 	const handleSubmit = async (e: React.SyntheticEvent) => {
 		e.preventDefault();
-		await axios.post('http://localhost:4000/posts', {
+		await axios.post('http://posts.com/posts', {
 			title,
 		});
 		alert('Post created successfully!');

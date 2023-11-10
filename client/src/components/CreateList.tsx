@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CreateComment from './comments/CreateComment';
 import DisplayComments from './comments/DisplayComments';
 
@@ -12,7 +12,7 @@ export default function CreateList() {
 	const [posts, setPosts] = useState<Post[]>([]);
 
 	const fetchPosts = async () => {
-		const response = await fetch('http://localhost:4002/posts');
+		const response = await fetch('http://posts.com/posts');
 		const data = await response.json();
 		setPosts(data);
 	};

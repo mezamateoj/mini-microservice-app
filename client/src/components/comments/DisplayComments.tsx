@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-
 interface Comment {
 	id: string;
 	content: string;
+	status: string;
 }
 
 export default function DisplayComments({
@@ -10,20 +9,6 @@ export default function DisplayComments({
 }: {
 	comments: Array<Comment>;
 }) {
-	// const [comments, setComments] = useState<Comment[]>([]);
-
-	// const getComments = async () => {
-	// 	const response = await fetch(
-	// 		`http://localhost:4001/posts/${postId}/comments`
-	// 	);
-	// 	const data = await response.json();
-	// 	setComments(data);
-	// };
-
-	// useEffect(() => {
-	// 	getComments();
-	// }, []);
-
 	return (
 		<div className="">
 			{comments.map((comment) => (
